@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #667eea;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .clear-btn {
+            background: #ef4444;
+            margin-top: 10px;
+        }
+
+        .clear-btn:hover {
+            background: #dc2626;
+        }
+
+        .output {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-height: 500px;
+        }
+
+        #result {
+            color: #10b981;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📦 Quản Lý Sản Phẩm</h1>
+        
+        <div class="content">
+            <div class="sidebar">
+                <div class="section">
+                    <div class="section-title">Xử lý mảng</div>
+                    <button onclick="handleCau3()">Câu 3: Name & Price</button>
+                    <button onclick="handleCau4()">Câu 4: Lọc tồn kho</button>
+                    <button onclick="handleCau5()">Câu 5: Kiểm tra giá</button>
+                    <button onclick="handleCau6()">Câu 6: Accessories</button>
+                    <button onclick="handleCau7()">Câu 7: Tổng giá trị</button>
+                    <button onclick="handleCau10()">Câu 10: SP khả dụng</button>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">Vòng lặp</div>
+                    <button onclick="handleCau8()">Câu 8: For...of</button>
+                    <button onclick="handleCau9()">Câu 9: For...in</button>
+                </div>
+
+                <button class="clear-btn" onclick="clearResult()">🗑️ Xóa kết quả</button>
+            </div>
+
+            <div class="output">
+                <div id="result">// Chọn một chức năng để xem kết quả...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
